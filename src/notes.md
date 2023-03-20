@@ -62,6 +62,7 @@ If you exactly want the particular version means do like this `npm i react-route
 
 `To check whether the package is installed or not by src -> package.json -> dependencies -> see the package & its version`
 
-Installation setups (procedures) are mostly available in chrome.
+### Installation setups (procedures) are mostly available in chrome.
+
 google search -> packagename with version -> you can see the procedures (steps) under installation sub heading.
 Eg:`https://reactrouter.com/en/v6.3.0/getting-started/installation`
