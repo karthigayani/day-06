@@ -15,7 +15,12 @@ import { AddColor } from './AddColor';
 function App() {
   return (
     <div>
-      
+      {/* step:2 */}
+      <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/movies">Movies</a></li>
+            <li><a href="/color-game">Color Game</a></li>
+        </ul>
       {/* step:1 */}
         <Routes>
             <Route path="/" element={<Home />} />
