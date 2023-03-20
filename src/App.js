@@ -17,9 +17,15 @@ function App() {
     <div>
       {/* step:2 */}
       <ul>
-            <li><a href="/">Home</a></li>
+        {/* Anchor tag - navigate the pages with refreshing */}
+            {/* <li><a href="/">Home</a></li>
             <li><a href="/movies">Movies</a></li>
-            <li><a href="/color-game">Color Game</a></li>
+            <li><a href="/color-game">Color Game</a></li> */}
+
+        {/* Link tag - navigate the pages without refreshing */}
+            <li><Link to="/">Home</Link></li>
+            <li><Link to="/movies">Movies</Link></li>
+            <li><Link to="/color-game">Color Game</Link></li>
         </ul>
       {/* step:1 */}
         <Routes>

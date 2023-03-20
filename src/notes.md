@@ -66,3 +66,15 @@ If you exactly want the particular version means do like this `npm i react-route
 
 google search -> packagename with version -> you can see the procedures (steps) under installation sub heading.
 Eg:`https://reactrouter.com/en/v6.3.0/getting-started/installation`
+
+Step:1 import `BrowserRouter` from `react-router-dom` to `index.js` file
+Step:2 wrap your app in `<BrowserRouter>`
+Now you can use React Router anywhere in your app!
+Step:3 replace the default markup with some routes and create your route components
+Step:4 Create route path
+Customer can't move pages by entering the links.
+Step:5 Create links.
+
+- In general we use anchor tag for page navigation. But when you use that it refresh your page every time. So it will affect smooth performance of SPA property.
+- So we go for link tag `<Link to="/">Home</Link>`
+- Link tag navigate the pages without refreshing the page.
