@@ -78,3 +78,21 @@ Step:5 Create links.
 - In general we use anchor tag for page navigation. But when you use that it refresh your page every time. So it will affect smooth performance of SPA property.
 - So we go for link tag `<Link to="/">Home</Link>`
 - Link tag navigate the pages without refreshing the page.
+
+### Hash vs / Browser router
+
+- Hash router:
+
+1. Older browser
+2. Eg: IE
+3. Works both in new and Old browsers
+
+- Browser router:
+
+1. Newer browsers
+2. Additional features
+3. Only in new browsers
+
+### How to convert Browser router to Hash router:
+
+- Instead of using `BrowserRouter` use `HashRouter`
