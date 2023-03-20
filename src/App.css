@@ -1,38 +1,58 @@
-.App {
-  text-align: center;
+/* Day-04-Nov-23 */
+.movie-container {
+  /* background-color: orange; */
+  width: 340px;
+}
+.movie-poster {
+  height: 640px;
+  width: 100%;
+  /* zoom  in */
+  object-fit: cover;
+}
+.movie-specs {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.movie-name {
+  font-size: 24px;
+  margin: 0;
+}
+.movie-rating {
+  font-size: 20px;
+}
+/* Responsiveness using grid method */
+/* RAM-Technic --> Repeat Autofit Minmax */
+.movie-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 1rem;
+  justify-items: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+/* Responsiveness using grid method */
+/* .movie-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: space-around;
+} */
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Day-05-Nov-24 */
+.add-movie-form {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  max-width: 450px;
+  margin: 1rem auto;
+  gap: 1rem;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+/* Add5 - CSS */
+/* body{
+  font-family: sans-serif;
+  font-size: 40px;
+  height: 100vh;
+  display: grid;
+  place-content: center;
+  text-align: center;
+} */
