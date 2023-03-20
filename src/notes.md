@@ -103,10 +103,17 @@ Step:5 Create links.
 
 ### Redirect
 
-When you land in 404 page
+-When you land in 404 page
 
 1. People typing random in URL
 2. No longer the page exists
+   `*` -> matches any path
+   `<Route path="*" element={<NotFound >}/>`
 
-`*` -> matches any path
-`<Route path="*" element={<NotFound >}/>`
+### When do you redirect
+
+1. Brand acquisition
+2. Marketing team - trends
+3. Security
+   // /films -> /movies
+   <Route path = "/films" element={<Navigate replace to="/movies" /> }/>

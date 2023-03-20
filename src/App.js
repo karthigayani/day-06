@@ -30,6 +30,7 @@ function App() {
       {/* step:1 */}
         <Routes>
             <Route path="/" element={<Home />} />
+            <Route path="/films" element={<Navigate replace to="/movies" /> } />
             <Route path="/movies" element={<MovieList/>} />
             <Route path="/color-game" element={<AddColor/>} />
             <Route path="*" element={<NotFound/>} />
@@ -41,8 +42,12 @@ export default App;
 
 function NotFound(){
   return (
-    <div>
-      <h1>404 error Page not found</h1>
+    <div className="not-found-container">
+      <h2 className="not-found">404 error</h2>
+      <img
+        src="https://cdn.dribbble.com/users/1175431/screenshots/6188233/404-error-dribbble-800x600.gif"
+        alt="404 Not Found"
+      />
     </div>
   );
 }
