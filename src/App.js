@@ -32,11 +32,20 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/movies" element={<MovieList/>} />
             <Route path="/color-game" element={<AddColor/>} />
+            <Route path="*" element={<NotFound/>} />
         </Routes>
     </div>
   );
 }
 export default App;
+
+function NotFound(){
+  return (
+    <div>
+      <h1>404 error Page not found</h1>
+    </div>
+  );
+}
 
 // Example: 1
 function Home() {
@@ -49,6 +58,7 @@ return(
 
 // Example: 2
 // Refer AddColor.js file
+
 
 
 

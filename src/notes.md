@@ -96,3 +96,17 @@ Step:5 Create links.
 ### How to convert Browser router to Hash router:
 
 - Instead of using `BrowserRouter` use `HashRouter`
+
+### Routing Flow:
+
+`User` -> Nav link (URL Changes- Routes Trigger) -> `Routes` (Contain bunch"group" of route) -> `Route` (Matches URL to the component) -> `Screen display`
+
+### Redirect
+
+When you land in 404 page
+
+1. People typing random in URL
+2. No longer the page exists
+
+`*` -> matches any path
+`<Route path="*" element={<NotFound >}/>`
