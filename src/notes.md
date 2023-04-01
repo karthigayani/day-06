@@ -117,3 +117,12 @@ Step:5 Create links.
 3. Security
    // /films -> /movies
    <Route path = "/films" element={<Navigate replace to="/movies" /> }/>
+
+### Lifting the state up technique
+
+-App(data)
+-> (props) MovieList(data)
+-> (props) AddColor(data)
+
+- Here, we are lifting the data in the MovieList to App for to share the data to AddColor. Why because , you can share the data through props (Parent -> Child(props))
+- MovieList & AddColor are siblings App is the parent for them.

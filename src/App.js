@@ -4,6 +4,7 @@ import './App.css';
 import { MovieList } from './MovieList';
 import { Routes, Route, Link } from "react-router-dom"; // imported router
 import { AddColor } from './AddColor';
+import {Navigate } from "react-router-dom"; // imported router
 // function App() {
 //   return (
 //     <MovieList/>
@@ -25,6 +26,7 @@ function App() {
         {/* Link tag - navigate the pages without refreshing */}
             <li><Link to="/">Home</Link></li>
             <li><Link to="/movies">Movies</Link></li>
+            {/* <li><Link to="/movies/add">Add Movie</Link></li> */}
             <li><Link to="/color-game">Color Game</Link></li>
         </ul>
       {/* step:1 */}
@@ -33,6 +35,7 @@ function App() {
             <Route path="/films" element={<Navigate replace to="/movies" /> } />
             <Route path="/movies" element={<MovieList/>} />
             <Route path="/color-game" element={<AddColor/>} />
+            {/* <Route path="/movies/add" element={<AddMovie/>} /> */}
             <Route path="*" element={<NotFound/>} />
         </Routes>
     </div>
