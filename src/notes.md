@@ -126,3 +126,17 @@ Step:5 Create links.
 
 - Here, we are lifting the data in the MovieList to App for to share the data to AddColor. Why because , you can share the data through props (Parent -> Child(props))
 - MovieList & AddColor are siblings App is the parent for them.
+
+### Routing hooks - useNavigate
+
+Use it when you want to change URL programmatically (clicked on a button)
+`Eg: changing URL programmatically` when you buy an order from shopping App (after payment), it automatically redirected to tracking page(Successfully ordered page). If the payment failes it goes to retry page (Error page).
+
+- Here, the user not going to success page/error page, we programmed to go to the pages automatically.
+- This can be done by useNavigate hook
+
+-> `useNavigate - Functionalities`
+
+1. navigate("/about) -> about page
+2. navigate(-1) -> backward 🔙 - 1 page backward
+3. navigate(1) -> forward ⏩ - 1 page forward

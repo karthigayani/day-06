@@ -64,8 +64,16 @@ export function MovieList({movieList, setMovieList}) {
       {/* <AddMovie movieList={movieList} setMovieList={setMovieList}/> */}
       {/* Lifting the state up technique */}
       <div className="movie-list">
-        {movieList.map((mv) => (
-          <Movie movie={mv} />
+        {/* {movieList.map((mv) => (
+          <Movie movie={mv} /> */}
+
+          {/* {movieList.map((mv, index) => (
+          <Movie key = {index} movie={mv} /> */}
+          {/* Parent -> Child (props) */}
+          {movieList.map((mv, index) => (
+            <div key = {index}>
+            <Movie movie={mv} id={index} />
+            </div>
         ))}
       </div>
     </div>
