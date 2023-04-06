@@ -5,6 +5,8 @@ import { AddColor } from './AddColor';
 import {Navigate } from "react-router-dom"; // imported router
 import { useState } from 'react';
 import { AddMovie } from './AddMovie';
+import Button from '@mui/material/Button';
+import KeyboardBackspaceIcon from '@mui/icons-material/KeyboardBackspace';
 
 const INITIAL_MOVIE_LIST = [
   {
@@ -150,7 +152,11 @@ function MovieDetails({ movieList }){
         </div>
         <p className="movie-summary">{movie.summary}</p>
         {/* <button>Back</button> */}
-        <button onClick={() => navigate(-1)}>Back</button>
+        {/* <button onClick={() => navigate(-1)}>Back</button> */}
+
+        {/* Styling using mui */}
+        {/* <Button variant="contained" onClick={() => navigate(-1)}>Back</Button> */}
+        <Button variant="contained" onClick={() => navigate(-1)} startIcon={<KeyboardBackspaceIcon />}>Back</Button>
       </div>
       </div>
   );
