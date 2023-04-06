@@ -7,6 +7,9 @@ import { useState } from 'react';
 import { AddMovie } from './AddMovie';
 import Button from '@mui/material/Button';
 import KeyboardBackspaceIcon from '@mui/icons-material/KeyboardBackspace';
+import AppBar from '@mui/material/AppBar';
+import Toolbar from '@mui/material/Toolbar';
+
 
 const INITIAL_MOVIE_LIST = [
   {
@@ -101,14 +104,23 @@ const INITIAL_MOVIE_LIST = [
 
 function App() {
   const [movieList, setMovieList] = useState(INITIAL_MOVIE_LIST);
+  const navigate = useNavigate();
   return (
     <div>
-      <ul>
+      <AppBar position="static">
+        <Toolbar>
+          <Button color="inherit" onClick={() => navigate("/")}>Home</Button>
+          <Button color="inherit" onClick={() => navigate("/movies")}>Movies</Button>
+          <Button color="inherit" onClick={() => navigate("/movies/add")}>Add Movie</Button>
+          <Button color="inherit" onClick={() => navigate("/color-game")}>Color Game</Button>
+        </Toolbar>
+      </AppBar>
+      {/* <ul>
         <li><Link to="/">Home</Link></li>
         <li><Link to="/movies">Movies</Link></li>
         <li><Link to="/movies/add">Add Movie</Link></li>
         <li><Link to="/color-game">Color Game</Link></li>
-      </ul>
+      </ul> */}
         <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/films" element={<Navigate replace to="/movies" /> } />
