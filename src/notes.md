@@ -163,3 +163,22 @@ file:///C:/Users/Admin/Downloads/a49o9-hbe8l.webp
 - Step 2: url matching taking place `App.js -> "/movies/:id" `
 - Step 3: component matching taking place using useParams
 - Step 4: extracting the `id`value
+
+### React context
+
+- It is introduced to overcome `Props drilling`.
+  Eg: MovieApp components -> file:///C:/Users/Admin/Downloads/aponw-nn52z.webp
+
+`Disadvantages of props drilling:`
+
+- Performance reduced
+- Reusability reduced
+- Forceful kepting the props.
+
+- Context overcome props drilling by `Pub / Sub Model`. {Publisher/Subscriber}
+  Eg: Pub - Youtuber, YouTube - Provider, Sub - people who have subcribed.
+- `In react terms` -> file:///C:/Users/Admin/Downloads/akyze-gymrr.webp
+- Pub - createContext
+- Provider - context.Provider
+- Sub - useContext.
+- React context flow: file:///C:/Users/Admin/Downloads/a0y9o-38xdj.webp
