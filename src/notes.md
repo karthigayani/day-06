@@ -140,3 +140,5 @@ Use it when you want to change URL programmatically (clicked on a button)
 1. navigate("/about) -> about page
 2. navigate(-1) -> backward 🔙 - 1 page backward
 3. navigate(1) -> forward ⏩ - 1 page forward
+
+### Day-09 Notes:
