@@ -2,7 +2,7 @@
 // Problem:1 
 import './App.css';
 import { MovieList } from './MovieList';
-import { Routes, Route, Link } from "react-router-dom"; // imported router
+import { Routes, Route, Link, useParams } from "react-router-dom"; // imported router
 import { AddColor } from './AddColor';
 import {Navigate } from "react-router-dom"; // imported router
 import { useState } from 'react';
@@ -102,12 +102,37 @@ function App() {
             <AddMovie movieList={movieList} setMovieList={setMovieList} />
             } 
             />
+
+            {/* <Route path="/movies/1" element={<MovieDetails />} /> */}
+            {/* : -> converts into variable (Matches any movieid) :- stores value(number) inside the id, id - user-defined variabe */}
+            {/* <Route path="/movies/:id" element={<MovieDetails />} /> */}
+            <Route path="/movies/:id" element={<MovieDetails movieList={movieList} />} />
             <Route path="*" element={<NotFound/>} />
         </Routes>
     </div>
   );
 }
 export default App;
+
+function MovieDetails({ movieList }){
+  const {id} = useParams();
+  const movie = movieList[id];
+  console.log(movieList, movie);
+
+  return(
+    <div>
+      <iframe 
+      width="956" 
+      height="538" 
+      src="https://www.youtube.com/embed/d9MyW72ELq0" 
+      title="Avatar: The Way of Water | Official Trailer" 
+      frameborder="0" 
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen
+      ></iframe>
+      <h1>Movie details page of {movie.name}...✨✨</h1>
+    </div>
+  );
+}
 
 function NotFound(){
   return (
