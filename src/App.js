@@ -1,6 +1,6 @@
 import './App.css';
 import { MovieList } from './MovieList';
-import { Routes, Route, Link, useParams } from "react-router-dom"; // imported router
+import { Routes, Route, Link, useParams, useNavigate } from "react-router-dom"; // imported router
 import { AddColor } from './AddColor';
 import {Navigate } from "react-router-dom"; // imported router
 import { useState } from 'react';
@@ -132,6 +132,7 @@ function MovieDetails({ movieList }){
   const ratingStyles = { 
     color: movie.rating >= 8.5 ? "green" : "red"
   };
+  const navigate = useNavigate();
   return(
     <div>
       <iframe 
@@ -148,6 +149,8 @@ function MovieDetails({ movieList }){
           <p style={ratingStyles} className="movie-rating">⭐{movie.rating}</p>
         </div>
         <p className="movie-summary">{movie.summary}</p>
+        {/* <button>Back</button> */}
+        <button onClick={() => navigate(-1)}>Back</button>
       </div>
       </div>
   );
