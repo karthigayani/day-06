@@ -10,7 +10,6 @@ import KeyboardBackspaceIcon from '@mui/icons-material/KeyboardBackspace';
 import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
 
-
 const INITIAL_MOVIE_LIST = [
   {
   "id": "99",
@@ -115,12 +114,6 @@ function App() {
           <Button color="inherit" onClick={() => navigate("/color-game")}>Color Game</Button>
         </Toolbar>
       </AppBar>
-      {/* <ul>
-        <li><Link to="/">Home</Link></li>
-        <li><Link to="/movies">Movies</Link></li>
-        <li><Link to="/movies/add">Add Movie</Link></li>
-        <li><Link to="/color-game">Color Game</Link></li>
-      </ul> */}
         <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/films" element={<Navigate replace to="/movies" /> } />
@@ -149,27 +142,22 @@ function MovieDetails({ movieList }){
   const navigate = useNavigate();
   return(
     <div>
-      <iframe 
-      width="100%" 
-      height="800px" 
-      src={movie.trailer}
-      title="Avatar: The Way of Water | Official Trailer" 
-      frameborder="0" 
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen
-      ></iframe>
-      <div className="movie-detail-container">
-        <div className="movie-specs">
-          <h2 className="movie-name">{movie.name}</h2>
-          <p style={ratingStyles} className="movie-rating">⭐{movie.rating}</p>
+        <iframe 
+          width="100%" 
+          height="800px" 
+          src={movie.trailer}
+          title="Avatar: The Way of Water | Official Trailer" 
+          frameborder="0" 
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen
+        ></iframe>
+        <div className="movie-detail-container">
+          <div className="movie-specs">
+            <h2 className="movie-name">{movie.name}</h2>
+            <p style={ratingStyles} className="movie-rating">⭐{movie.rating}</p>
+          </div>
+          <p className="movie-summary">{movie.summary}</p>
+          <Button variant="contained" onClick={() => navigate(-1)} startIcon={<KeyboardBackspaceIcon />}>Back</Button>
         </div>
-        <p className="movie-summary">{movie.summary}</p>
-        {/* <button>Back</button> */}
-        {/* <button onClick={() => navigate(-1)}>Back</button> */}
-
-        {/* Styling using mui */}
-        {/* <Button variant="contained" onClick={() => navigate(-1)}>Back</Button> */}
-        <Button variant="contained" onClick={() => navigate(-1)} startIcon={<KeyboardBackspaceIcon />}>Back</Button>
-      </div>
       </div>
   );
 }
