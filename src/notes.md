@@ -142,3 +142,24 @@ Use it when you want to change URL programmatically (clicked on a button)
 3. navigate(1) -> forward ⏩ - 1 page forward
 
 ### Day-09 Notes:
+
+- : -> converts into variable (Matches any movieid) id- stores value(number) inside the id
+- here the variable `id` is user defined (abc,xyz,id....)
+
+### Routing hooks - useParams
+
+Get parameter from url
+
+- Dynamic path
+
+1. path = "/about/:id"
+2. const {id} = useParams()
+
+### useParams flow:
+
+file:///C:/Users/Admin/Downloads/a49o9-hbe8l.webp
+
+- Step 1: useNavigate changes the url
+- Step 2: url matching taking place `App.js -> "/movies/:id" `
+- Step 3: component matching taking place using useParams
+- Step 4: extracting the `id`value
