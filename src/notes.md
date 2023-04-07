@@ -192,3 +192,16 @@ file:///C:/Users/Admin/Downloads/a49o9-hbe8l.webp
 - Final App using React context-> https://codesandbox.io/s/sad-shannon-kqsq84?file=/src/App.js
 
 - React context Eg : 2 -> https://codesandbox.io/s/async-star-24vrf7?file=/src/App.js
+
+### Applying Dark & Light theme Using mui
+
+- Google search -> mui.com -> get started -> customization L.H.S -> Dark theme -> copy the `darkTheme` variable declaration part (createTheme - createContext) and paste it in your App component -> Then import the mui theme components needed -> Then wrap Your App return JSX part with mui `ThemeProvider` -> enter the value `theme={}`-> and then Save it
+- Your App becomes responsive to dark/light theme without subscribing, why because your all mui components are already subscribed with `ThemeProvider` by default. So the components from mui are responsive to dark/light theme.
+- before wraping with `themeprovider` wrap with `paper` component from mui for better presentation.
+- Also import paper component from mui.
+- Google search -> mui.com -> get started -> components L.H.S -> Surfaces -> paper -> Then import the mui paper components needed -> Then wrap Your App return JSX part with mui `paper` -> enter the elevation ={4} value (user defined value )-> and then Save it
+
+### Add button for theme
+
+- Google search -> mui.com -> get started -> customization L.H.S -> Dark theme -> Toggling color mode -> copy the `brightness4icon & brightness7icon` component and paste where you needed-> Then import the mui `brightness4icon & brightness7icon` icon statements ->
+- note : put `brightness4icon & brightness7icon` inside `startIcon` attribute . You copy it from mui eg: code itself.

@@ -2,6 +2,8 @@
 .movie-container {
   /* background-color: orange; */
   width: 340px;
+  /* height: min-content; */
+  /* height adjust to content-height */
 }
 .movie-poster {
   height: 640px;
@@ -28,6 +30,11 @@
   grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
   gap: 1rem;
   justify-items: center;
+
+  /* display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: space-around; */
 }
 
 /* Responsiveness using grid method */
