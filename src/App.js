@@ -116,6 +116,12 @@ function App() {
       mode: mode,
     },
   });
+
+  // fetch("Your Api Link").then((data) => data.json()).then((mvs) => console.log(mvs));
+  fetch("https://6404dff940597b65de2c4412.mockapi.io/moviesappapi")
+  .then((data) => data.json())
+  .then((mvs) => console.log(mvs));
+  
   return (
     <ThemeProvider theme={darkTheme}>
       <Paper elevation={4} style={{minHeight:"100vh", borderRadius:"0px"}}>

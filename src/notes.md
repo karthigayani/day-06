@@ -205,3 +205,20 @@ file:///C:/Users/Admin/Downloads/a49o9-hbe8l.webp
 
 - Google search -> mui.com -> get started -> customization L.H.S -> Dark theme -> Toggling color mode -> copy the `brightness4icon & brightness7icon` component and paste where you needed-> Then import the mui `brightness4icon & brightness7icon` icon statements ->
 - note : put `brightness4icon & brightness7icon` inside `startIcon` attribute . You copy it from mui eg: code itself.
+
+### Adding App to api link
+
+- Google search -> mockapi.io -> login with github -> click on `+` icon behind projects -> name your projectname (Eg: `movieappapi` letters must be full-small) -> click on `create`
+- click on your created project -> newResource -> enter a name (eg: `movie` component name where the datas gonna be used).
+- enter the data and its type -> press create.
+- You will get the button in the name of your `newResource` you have created.
+- click on the button `movie` -> You will see data -> click on it -> it will open a dialogue box with empty array -> clear it by pressing backspace key -> then copy paste the api array -> press on `update`.
+- you can edit the array data whenever you want.
+- then click on the newResource you have created `movie` you will get the apilink with your datas.
+- `If you want to create new api means -> click on newResource and follow the same steps.`
+- `In mockapi.io trail version provide only 1 project and 5 newResource only `
+
+### How to use api link in your app ?
+
+- fetch method.
+- put the fetch method in your App component.
