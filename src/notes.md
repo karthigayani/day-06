@@ -222,3 +222,13 @@ file:///C:/Users/Admin/Downloads/a49o9-hbe8l.webp
 
 - fetch method.
 - put the fetch method in your App component.
+
+### Day - 11 STARTED
+
+### Life cycle method:
+
+- To avoid double time printing
+- Life cycle method:(class component) - file:///C:/Users/Admin/Downloads/arejh-bhr77.webp
+- Life cycle method:(function component) - file:///C:/Users/Admin/Downloads/a09tn-u1aye.webp
+- How many times useEffect will run ? It depends upon dependency array. If you didn't mention dependency array it will callback/run on every changes of state & props.
+- When you put empty array in useEffect , callback will call once after the function/component mounted. ie., it act likes DidMount
