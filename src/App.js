@@ -1,18 +1,18 @@
 import './App.css';
 import { MovieList } from './MovieList';
-import { Routes, Route, Link, useParams, useNavigate } from "react-router-dom"; // imported router
+import { Routes, Route, Link, useNavigate } from "react-router-dom"; // imported router
 import { AddColor } from './AddColor';
 import {Navigate } from "react-router-dom"; // imported router
 import { useEffect, useState } from 'react';
 import { AddMovie } from './AddMovie';
 import Button from '@mui/material/Button';
-import KeyboardBackspaceIcon from '@mui/icons-material/KeyboardBackspace';
 import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 import Paper from '@mui/material/Paper';
 import Brightness4Icon from '@mui/icons-material/Brightness4';
 import Brightness7Icon from '@mui/icons-material/Brightness7';
+import { MovieDetails } from './MovieDetails';
 
 
 // const INITIAL_MOVIE_LIST = [
@@ -123,9 +123,22 @@ function App() {
   // .then((data) => data.json())
   // .then((mvs) => console.log(mvs));
 
-  // UseEffect will trigger/callback after the App component build/mounted.
+  // // UseEffect will trigger/callback after the App component build/mounted.
+  // useEffect(() => {
+  //   fetch("https://6404dff940597b65de2c4412.mockapi.io/moviesappapi")
+  //   .then((data) => data.json())
+  //   // .then((mvs) => console.log(mvs)); 
+  //   .then((mvs) => setMovieList(mvs)); 
+  // },[]); 
+
+  // Axios - Not an inbuilt Library - You need to install it.
+  // Fetch - Inbuilt library - Not need to install external library - So your App/Website loading data & time will be saved.
+  // Axios works same as fetch. Syntax only differ.
+  
+  //CRUD Property - Read(GET) -> Get method is a default method. So You don't need to mention . 
+  // For other CRUD property You have to mention like this.(Instead of GET to can use "POST , PUT & DELETE")
   useEffect(() => {
-    fetch("https://6404dff940597b65de2c4412.mockapi.io/moviesappapi")
+    fetch("https://6404dff940597b65de2c4412.mockapi.io/moviesappapi",{method:"GET"})
     .then((data) => data.json())
     // .then((mvs) => console.log(mvs)); 
     .then((mvs) => setMovieList(mvs)); 
@@ -156,8 +169,11 @@ function App() {
         <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/films" element={<Navigate replace to="/movies" /> } />
-            <Route path="/movies" element={
+            {/* <Route path="/movies" element={
             <MovieList movieList={movieList} setMovieList={setMovieList} />
+            }/> */}
+            <Route path="/movies" element={
+            <MovieList/>
             }/>
             <Route path="/color-game" element={<AddColor/>} />
             <Route path="/movies/add" element={
@@ -172,36 +188,6 @@ function App() {
   );
 }
 export default App;
-
-function MovieDetails({ movieList }){
-  const {id} = useParams();
-  const movie = movieList[id];
-  console.log(movieList, movie);
-  const ratingStyles = { 
-    color: movie.rating >= 8.5 ? "green" : "red"
-  };
-  const navigate = useNavigate();
-  return(
-    <div>
-        <iframe 
-          width="100%" 
-          height="800px" 
-          src={movie.trailer}
-          title="Avatar: The Way of Water | Official Trailer" 
-          frameborder="0" 
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen
-        ></iframe>
-        <div className="movie-detail-container">
-          <div className="movie-specs">
-            <h2 className="movie-name">{movie.name}</h2>
-            <p style={ratingStyles} className="movie-rating">⭐{movie.rating}</p>
-          </div>
-          <p className="movie-summary">{movie.summary}</p>
-          <Button variant="contained" onClick={() => navigate(-1)} startIcon={<KeyboardBackspaceIcon />}>Back</Button>
-        </div>
-      </div>
-  );
-}
 
 function NotFound(){
   return (

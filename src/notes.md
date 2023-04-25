@@ -232,3 +232,36 @@ file:///C:/Users/Admin/Downloads/a49o9-hbe8l.webp
 - Life cycle method:(function component) - file:///C:/Users/Admin/Downloads/a09tn-u1aye.webp
 - How many times useEffect will run ? It depends upon dependency array. If you didn't mention dependency array it will callback/run on every changes of state & props.
 - When you put empty array in useEffect , callback will call once after the function/component mounted. ie., it act likes DidMount
+- when you put return inside the useEffect, it act as willUnmount.
+- `use effect is generally used for console,get notification for any changes & data fetch`
+- `UseEffect will trigger/callback after the App component build/mounted.`
+
+### CRUD
+
+- C -> Create -> Post
+- R -> Read -> Get
+- U -> Update -> Put
+- D -> Delete -> Delete
+
+=> Axios - Not an inbuilt Library - You need to install it.
+=> Fetch - Inbuilt library - Not need to install external library - So your App/Website loading data & time will be saved.
+
+### Applying render Props pattern
+
+- deletebutton added in movie list as JSX. Here you are rendering the props. So we called as `renderProps`.
+
+### Container (data) & Presentational (view) | Smart (data) & Presentational (view) Pattern
+
+- Smart/Container
+- Here Movielist -> Smart/Container component -> It deals with data
+- Movie -> Presentational component
+
+### Learn more about patterns -> https://javascriptpatterns.vercel.app/patterns/react-patterns/conpres
+
+### Learn about `mansonry layout`
+
+### Component navigation in vs `press/hold down "ctrl" key and the place the curser on the component`
+
+### Added "Fira Code" font ligatures in vs for better view.
+
+### Applied CSS emmet setting for JSX
