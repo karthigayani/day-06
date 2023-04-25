@@ -110,7 +110,7 @@ function App() {
   // const [movieList, setMovieList] = useState(INITIAL_MOVIE_LIST);
   const [movieList, setMovieList] = useState([]); // Applying useEffect
   const navigate = useNavigate();
-  const [mode, setMode] = useState("light");
+  const [mode, setMode] = useState("dark");
   const darkTheme = createTheme({
     palette: {
       // mode: 'dark',
@@ -155,6 +155,7 @@ function App() {
           <Button color="inherit" onClick={() => navigate("/movies/add")}>Add Movie</Button>
           <Button color="inherit" onClick={() => navigate("/color-game")}>Color Game</Button>
           <Button 
+            sx={{marginLeft:"auto"}}
             startIcon={
               mode === 'dark' ? <Brightness7Icon /> : <Brightness4Icon />
             }
@@ -176,10 +177,14 @@ function App() {
             <MovieList/>
             }/>
             <Route path="/color-game" element={<AddColor/>} />
-            <Route path="/movies/add" element={
-            <AddMovie movieList={movieList} setMovieList={setMovieList} />
-            }/>
-            <Route path="/movies/:id" element={<MovieDetails movieList={movieList} />} />
+            <Route path="/movies/add" 
+              element={
+                <AddMovie movieList={movieList} setMovieList={setMovieList} />
+            }
+            />
+            {/* <Route path="/movies/:id" element={<MovieDetails movieList={movieList} />} /> */}
+            {/* removed props */}
+            <Route path="/movies/:id" element={<MovieDetails />} />
             <Route path="*" element={<NotFound/>} />
         </Routes>
     </div>

@@ -254,7 +254,7 @@ file:///C:/Users/Admin/Downloads/a49o9-hbe8l.webp
 
 - Smart/Container
 - Here Movielist -> Smart/Container component -> It deals with data
-- Movie -> Presentational component
+- Movie -> Presentational component -> It deals with view
 
 ### Learn more about patterns -> https://javascriptpatterns.vercel.app/patterns/react-patterns/conpres
 
@@ -265,3 +265,44 @@ file:///C:/Users/Admin/Downloads/a49o9-hbe8l.webp
 ### Added "Fira Code" font ligatures in vs for better view.
 
 ### Applied CSS emmet setting for JSX
+
+**\*\***\***\*\*** GET & DELETE **\*\***\*\*\*\***\*\***
+
+### Day-12 Started
+
+- Styling the Delete Button using material-ui
+
+### `margin-left-auto` property in CSS
+
+- It can be applied only when the items are inside the flex.
+- you can put `sx instead of style` when you styling material-ui components. (Applied in `MovieList.js` file at IconButton, also in `App.js inside tollbar`)
+- What is the difference b/w style and sx?
+  -> when you put `style` it act as inline CSS, so correction becomes difficuilt.
+  -> when you put `sx` it act as External CSS, so correction becomes easy.
+
+### POST method steps:
+
+- 1. method - POST => mention method type POST
+- 2. body - data (JSON) => sending data as JSON format
+- 3. header - JSON => Mention JSON in header. (Here you are conforming/telling to the server that your data is JSON)
+- Why we converting to `JSON (String)` format,
+  1. because it is a common/intermediate language to communicate with other language. (For Eg: Your server maybe phython/JS/C/C++/Java/PHP You can easily communicate through JSON)
+  2. Easy to access.
+- XML also an intermediate language, but the syntax are very large.
+
+### Header:
+
+- It is mostly used for sending cookies
+- It presents in all methods (POST,GET,PUT,DELETE)
+- Type:
+
+1. Request Header - Eg: cookies.
+2. Response Header
+
+### Body
+
+- It presents in (POST & PUT) methods
+
+### Form Validations
+
+- Edit movie

@@ -2,6 +2,10 @@ import { useState } from 'react';
 import { Movie } from './Movie';
 // import { AddMovie } from './AddMovie';
 import {useEffect } from 'react';
+import IconButton from '@mui/material/IconButton';
+import Stack from '@mui/material/Stack';
+import DeleteIcon from '@mui/icons-material/Delete';
+
 // export function MovieList({movieList, setMovieList}) {
 //   // const [movieList, setMovieList] = useState([
 //   //   {
@@ -139,7 +143,18 @@ export function MovieList(){
               // deleteButton={<button>Delete me</button>}
               // step:2
               deleteButton={
-              <button onClick={()=> deleteMovie(mv.id)}>Delete me</button>
+              // <button onClick={()=> deleteMovie(mv.id)}>Delete me</button>
+
+              // Styling Delete button using material-ui
+              <IconButton 
+                // style={{marginLeft:"auto"}}
+                sx={{marginLeft:"auto"}}
+                onClick={()=> deleteMovie(mv.id)} 
+                aria-label="delete"
+                color="error"
+              >
+                <DeleteIcon />
+              </IconButton>
             }
             />
            </div>
