@@ -79,6 +79,7 @@
   max-width: 750px;
   padding: 16px;
 }
+/* Step:19 Basic Form */
 .add-movie-form {
   display: flex;
   flex-direction: column;

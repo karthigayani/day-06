@@ -31,7 +31,9 @@ const movieValidationSchema = yup.object({
   // Step:17 Customizing the message 
   // email: yup.string().min(8,"Need a bigger email 🤩").required(),
   // password: yup.string().min(4,"Need a strong password 🤩").required(),
-  email: yup.string().min(8,"Need a bigger email 🤩").required("A cool email is in need 🤩"),
+  // email: yup.string().min(8,"Need a bigger email 🤩").required("A cool email is in need 🤩"),
+  // email: yup.string().email().required("A cool email is in need 🤩"),
+  email: yup.string().email("Need a valid email 🤩 ").required("A cool email is in need 🤩"),
   password: yup.string().min(4,"Need a strong password 🤩").required("A cool password is in need 🤩"),
 });
 
@@ -51,7 +53,7 @@ export function BasicForm() {
     validationSchema: movieValidationSchema,
 
     // Step:10
-    // Flow -> When you press submit button -> onSubmit eventListener will trigger the formik.handleSubmit -> This will trigger the onSubmit key function of formik object-> and prodeuce the output.
+    // Flow -> When you press submit button -> onSubmit eventListener will trigger the formik.handleSubmit -> This will send result to the formik object-> In the formit object validationSchema is present -> so validationSchema triggers movieValidationSchema -> Here the actual validation taking place based on conditions-> Once the result meets true, onSubmit key function trigger and produce the output. If it fails it shows Error.
     onSubmit: (values) => {
       console.log("Form values: ", values);
     },
@@ -95,7 +97,9 @@ export function BasicForm() {
         placeholder="Email"
         name="email" 
         onChange={formik.handleChange} 
-        // Step:20 Added onBlur={formik.handleBlur}
+        // Step:20 Added onBlur={formik.handleBlur} To avoid showing error message before visiting/entering the data to that particular input field.
+        // So we are giving chance to the user to enter the right data. if they enter wrong data and move to next feild means error msg will get/shown, otherwise we won't show error msg.
+        
         onBlur={formik.handleBlur}
       />
       {/* {formik.errors.email} */}
@@ -116,16 +120,16 @@ export function BasicForm() {
       {formik.touched.password && formik.errors.password ? formik.errors.password : null }
 
 
-      {/* Step:22 */}
-      <h2>Errors</h2>
+      {/* Step:22 for understanding purpose you can uncommand it */}
+      {/* <h2>Errors</h2>
       <pre>{JSON.stringify(formik.errors)}</pre>
       <h2>Touched</h2>
-      <pre>{JSON.stringify(formik.touched)}</pre>
+      <pre>{JSON.stringify(formik.touched)}</pre> */}
 
       {/* Step:11 put type="submit" for submit button to avoid confusing browser*/}
       {/* <button>Submit</button> */}
       <button type="submit">Submit</button>
     </form>
-  );
+  ); 
 }
 

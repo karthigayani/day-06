@@ -339,3 +339,5 @@ file:///C:/Users/Admin/Downloads/a49o9-hbe8l.webp
 - Check whether the packages installed or not at the package.json file.
 - Follow the steps in `BasicForm.js` file.
 - Error flow => file:///C:/Users/Admin/Downloads/avz9u-9hmqy.webp
+
+### Learn regex for to create strong form validation -> https://regexone.com/
