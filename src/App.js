@@ -13,6 +13,7 @@ import Paper from '@mui/material/Paper';
 import Brightness4Icon from '@mui/icons-material/Brightness4';
 import Brightness7Icon from '@mui/icons-material/Brightness7';
 import { MovieDetails } from './MovieDetails';
+import { BasicForm } from './BasicForm';
 
 
 // const INITIAL_MOVIE_LIST = [
@@ -185,6 +186,9 @@ function App() {
             {/* <Route path="/movies/:id" element={<MovieDetails movieList={movieList} />} /> */}
             {/* removed props */}
             <Route path="/movies/:id" element={<MovieDetails />} />
+
+            {/* FormValidation step-2 creating Route path*/}
+            <Route path="/basic-form" element={<BasicForm />} />
             <Route path="*" element={<NotFound/>} />
         </Routes>
     </div>
@@ -218,12 +222,7 @@ return(
 // Example: 2
 // Refer AddColor.js file
 
-
-
-
-
-
-// // useState eg:
+// Example: 3 useState
 // function Add5() {
 //   let [num, setNum] = useState(100);
 // return (
@@ -235,3 +234,6 @@ return(
 //   </div>
 // );
 // }
+
+// Example: 4
+// Refer BasicForm.js file

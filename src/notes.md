@@ -305,4 +305,37 @@ file:///C:/Users/Admin/Downloads/a49o9-hbe8l.webp
 
 ### Form Validations
 
-- Edit movie
+- Eg -> file:///C:/Users/Admin/Downloads/az2vp-h06d1.webp
+- Eg : Login form/ Aadhar form etc...
+
+### Usage of Form Validations
+
+1. `To avoid storing junk data.`
+
+- For Eg: When you didn't add user name in login form you are not able to login again. So it is a junk data. because their is no use of storing it.
+
+2. `To improve user experience.`
+
+- Using Form Validations you can instruct the user to get proper data you want.
+- You can also tell to the user already having account...
+
+### FORMIK & YUP.JS package
+
+- Form Validations is done in react using `the FORMIK & YUP.JS` packages.
+- FORMIK - Working with form is easy using formik
+- YUP.JS - validation
+- Overallflow -> file:///C:/Users/Admin/Downloads/a5emd-0pzs8.webp
+- Formik doc => https://formik.org/docs/overview
+- yup.js doc => https://github.com/jquense/yup
+- Installing command => npm install formik yup
+
+- yup import statement => `import * as yup from 'yup'`;
+- FORMIK import statement => import { useFormik } from "formik";
+- useFormik syntax : https://formik.org/docs/api/useFormik
+
+### Steps:
+
+- stop running react app , type `npm install formik yup` and press enter in terminal followed by your app name.
+- Check whether the packages installed or not at the package.json file.
+- Follow the steps in `BasicForm.js` file.
+- Error flow => file:///C:/Users/Admin/Downloads/avz9u-9hmqy.webp
