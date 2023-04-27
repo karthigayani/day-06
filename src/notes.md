@@ -341,3 +341,24 @@ file:///C:/Users/Admin/Downloads/a49o9-hbe8l.webp
 - Error flow => file:///C:/Users/Admin/Downloads/avz9u-9hmqy.webp
 
 ### Learn regex for to create strong form validation -> https://regexone.com/
+
+### Day - 13 Started
+
+### creating strong form validation using regex
+
+- Eg: email validation
+- open formix doc link -> https://formik.org/docs/overview
+- You can see validation on the L.H.S side, click on it.
+- scroll down and copy the regex code (/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i)for email validation and put it at movieValidationSchema inside the matches method.
+
+### brief note for /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i
+
+1. ^ : Matches the start of a string
+2. [A-Z0-9._%+-] : Matches any uppercase letter, digit, period, underscore, percent sign, plus sign, or hyphen
+3. - : Matches the previous expression one or more times
+4. @ : Matches the "@" symbol
+5. [A-Z0-9.-] : Matches any uppercase letter, digit, period, or hyphen
+6. \. : Matches a literal period (since "." is a special character in regular expressions)
+7. [A-Z]{2,4} : Matches any uppercase letter, exactly 2 to 4 times
+8. $ : Matches the end of the string
+9. The /i at the end of the pattern makes the expression case-insensitive, so it will match both uppercase and lowercase letters.
