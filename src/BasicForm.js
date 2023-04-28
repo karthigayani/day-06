@@ -1,7 +1,7 @@
 import { useFormik } from "formik"; 
 import * as yup from 'yup';
 
-const movieValidationSchema = yup.object({
+const formValidationSchema = yup.object({
   email: yup
   .string()
   .email("Need a valid email 🤩 ")
@@ -20,14 +20,14 @@ export function BasicForm() {
       email: "",
       password: "", 
     },
-    validationSchema: movieValidationSchema,
+    validationSchema: formValidationSchema,
     onSubmit: (values) => {
       console.log("Form values: ", values);
     },
   });
 
   return (
-    <form className="add-movie-form" onSubmit={handleSubmit}>
+    <form className="add-basic-form" onSubmit={handleSubmit}>
 
       <h1>BasicForm</h1>
       <input 
@@ -78,7 +78,7 @@ export function BasicForm() {
 // // **************************************************************************************
 
 // // Step:14
-// const movieValidationSchema = yup.object({
+// const formValidationSchema = yup.object({
 //   // email: yup.string().min(8),
 //   // password: yup.string().min(4),
 
@@ -117,10 +117,10 @@ export function BasicForm() {
 //     },
 
 //     // Step:13
-//     validationSchema: movieValidationSchema,
+//     validationSchema: formValidationSchema,
 
 //     // Step:10
-//     // Flow -> When you press submit button -> onSubmit eventListener will trigger the formik.handleSubmit -> This will send result to the formik object-> In the formit object validationSchema is present -> so validationSchema triggers movieValidationSchema -> Here the actual validation taking place based on conditions-> Once the result meets true, onSubmit key function trigger and produce the output. If it fails it shows Error.
+//     // Flow -> When you press submit button -> onSubmit eventListener will trigger the formik.handleSubmit -> This will send result to the formik object-> In the formit object validationSchema is present -> so validationSchema triggers formValidationSchema -> Here the actual validation taking place based on conditions-> Once the result meets true, onSubmit key function trigger and produce the output. If it fails it shows Error.
 //     onSubmit: (values) => {
 //       console.log("Form values: ", values);
 //     },
@@ -132,8 +132,8 @@ export function BasicForm() {
 //     // <form onSubmit={formik.handleSubmit}>
 
 //     // Step:18 Adding className for making flex
-//     // Step:19 Refer styling App.css => add-movie-form
-//     <form className="add-movie-form" onSubmit={formik.handleSubmit}>
+//     // Step:19 Refer styling App.css => add-basic-form
+//     <form className="add-basic-form" onSubmit={formik.handleSubmit}>
 
 //       <h1>BasicForm</h1>
       

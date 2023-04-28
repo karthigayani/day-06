@@ -80,7 +80,7 @@
   padding: 16px;
 }
 /* Step:19 Basic Form */
-.add-movie-form {
+.add-basic-form {
   display: flex;
   flex-direction: column;
 }
