@@ -362,3 +362,39 @@ file:///C:/Users/Admin/Downloads/a49o9-hbe8l.webp
 7. [A-Z]{2,4} : Matches any uppercase letter, exactly 2 to 4 times
 8. $ : Matches the end of the string
 9. The /i at the end of the pattern makes the expression case-insensitive, so it will match both uppercase and lowercase letters.
+
+### redux -> https://redux.js.org/
+
+- Redux is a state management library.
+- state(current value) => current data of all components in the app.
+- also it is a 3rd party library like formik,yup,react router dom.
+- react router dom is not built by facebook, but it had a trust from react.
+- Likewise redux is a trusted / arthorized library of react.
+- So redux had a hook in react for working with redux methodology.
+- redux is an advanced concept. Working with redux for smaller app is much difficult. But for larger application you will realise the benefits.
+- `redux working flow is an important interview question`
+
+### why redux is important?
+
+1.  In everyapp state is dependent on some other state.
+    Eg: profile pic in facebook.
+    - When you change profile pic, it will changed all the places where the profile pic shown on facebook.
+2.  So redux philosophy is don't kept the states in every component. Which means keeping all the states in a central place called store.
+3.  This store is called `Single source of truth`.
+4.  So you can take the data from store for which ever component in need by use/subscribe it
+5.  You can rewind the data in redux.
+6.  For the popularity and demand of redux, react introduced `useReducer` hook for implementing redux in react.
+
+### how to implement redux ?
+
+- Eg flow => file:///C:/Users/Admin/Downloads/ag1wd-lueoj.webp
+- For eg: When you want to order a thing in amazon. 1 -> You search the product in amazon -> 2. Before ordering amazon verify/checks whether the product is available or not in their store.
+- So amazon only have the access to check the product availability in their store. You/others could not have the access to check.
+- So it is a unidirectional flow.
+
+1. Redux flow => file:///C:/Users/Admin/Downloads/aom8v-u1jl2.webp
+
+   1. Reducer is the only person access to the store.
+
+2. With and without redux => file:///C:/Users/Admin/Downloads/akude-steww.webp
+3. Redux Eg: Problem => https://codesandbox.io/s/blissful-roman-6u90q9?file=/src/App.js
