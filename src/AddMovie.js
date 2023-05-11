@@ -132,7 +132,11 @@ export function AddMovie({ movieList, setMovieList }) {
         name="name" //Step:7 Changing the particulars
         onChange={handleChange}
         onBlur={handleBlur}
-      />{touched.name && errors.name ? errors.name : null } 
+        // Step:20 Material ui property added for styling the error box and msg. So comment the touch property
+        error={touched.name && errors.name}
+        helperText={touched.name && errors.name ? errors.name : null}
+      />
+      {/* {touched.name && errors.name ? errors.name : null }  */}
       {/* Step:16 touch property added for to display error*/}
 
       <TextField 
@@ -144,7 +148,11 @@ export function AddMovie({ movieList, setMovieList }) {
         name="poster" //Step:7 Changing the particulars
         onChange={handleChange}
         onBlur={handleBlur}
-      />{touched.poster && errors.poster ? errors.poster : null }
+        // Step:20 Material ui property added for styling the error box and msg. So comment the touch property
+        error={touched.poster && errors.poster}
+        helperText={touched.poster && errors.poster ? errors.poster : null}
+      />
+      {/* {touched.poster && errors.poster ? errors.poster : null } */}
       {/* Step:16 touch property added for to display error*/}
 
       <TextField 
@@ -156,7 +164,11 @@ export function AddMovie({ movieList, setMovieList }) {
         name="rating" //Step:7 Changing the particulars
         onChange={handleChange}
         onBlur={handleBlur} 
-      />{touched.rating && errors.rating ? errors.rating : null }
+        // Step:20 Material ui property added for styling the error box and msg. So comment the touch property
+        error={touched.rating && errors.rating}
+        helperText={touched.rating && errors.rating ? errors.rating : null}
+      />
+      {/* {touched.rating && errors.rating ? errors.rating : null } */}
       {/* Step:16 touch property added for to display error*/}
 
       <TextField 
@@ -168,7 +180,11 @@ export function AddMovie({ movieList, setMovieList }) {
         name="summary" //Step:7 Changing the particulars
         onChange={handleChange}
         onBlur={handleBlur}
-      />{touched.summary && errors.summary ? errors.summary : null }
+        // Step:20 Material ui property added for styling the error box and msg. So comment the touch property
+        error={touched.summary && errors.summary}
+        helperText={touched.summary && errors.summary ? errors.summary : null}
+      />
+      {/* {touched.summary && errors.summary ? errors.summary : null } */}
       {/* Step:16 touch property added for to display error*/}
 
       <TextField 
@@ -180,7 +196,11 @@ export function AddMovie({ movieList, setMovieList }) {
         name="trailer" //Step:7 Changing the particulars
         onChange={handleChange}
         onBlur={handleBlur}
-      />{touched.trailer && errors.trailer ? errors.trailer : null }
+        // Step:20 Material ui property added for styling the error box and msg. So comment the touch property
+        error={touched.trailer && errors.trailer}
+        helperText={touched.trailer && errors.trailer ? errors.trailer : null}
+      />
+      {/* {touched.trailer && errors.trailer ? errors.trailer : null } */}
       {/* Step:16 touch property added for to display error*/}
 
       <Button 

@@ -14,6 +14,7 @@ import Brightness4Icon from '@mui/icons-material/Brightness4';
 import Brightness7Icon from '@mui/icons-material/Brightness7';
 import { MovieDetails } from './MovieDetails';
 import { BasicForm } from './BasicForm';
+import { EditMovie } from './EditMovie';
 
 
 // const INITIAL_MOVIE_LIST = [
@@ -189,6 +190,8 @@ function App() {
 
             {/* FormValidation step-2 creating Route path*/}
             <Route path="/basic-form" element={<BasicForm />} />
+             {/* editmovie.js -> step:2 */}
+            <Route path="/movies/edit/:id" element={<EditMovie/>} />
             <Route path="*" element={<NotFound/>} />
         </Routes>
     </div>

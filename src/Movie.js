@@ -9,7 +9,7 @@ import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import CardActions from '@mui/material/CardActions';
 
-export function Movie({ movie , id , deleteButton}) {
+export function Movie({ movie , id , deleteButton , editButton}) {
   
   const ratingStyles = { 
     color: movie.rating >= 8.5 ? "green" : "red"
@@ -43,7 +43,7 @@ export function Movie({ movie , id , deleteButton}) {
       <CardActions>
         {/* <Counter /> */}
         {/* renderingProps pattern */}
-        <Counter /> {deleteButton}
+        <Counter /> {editButton} {deleteButton}
       </CardActions>
     </Card>
   );

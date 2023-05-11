@@ -398,3 +398,10 @@ file:///C:/Users/Admin/Downloads/a49o9-hbe8l.webp
 
 2. With and without redux => file:///C:/Users/Admin/Downloads/akude-steww.webp
 3. Redux Eg: Problem => https://codesandbox.io/s/blissful-roman-6u90q9?file=/src/App.js
+
+### Day-14
+
+1. Redux Eg: Problem => https://codesandbox.io/s/blissful-roman-6u90q9?file=/src/App.js
+2. color updation flow => file:///C:/Users/Admin/Downloads/a2fxi-njt9j.webp
+
+### React Recap:

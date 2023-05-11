@@ -5,6 +5,8 @@ import {useEffect } from 'react';
 import IconButton from '@mui/material/IconButton';
 import Stack from '@mui/material/Stack';
 import DeleteIcon from '@mui/icons-material/Delete';
+import EditIcon from '@mui/icons-material/Edit';
+import { useNavigate } from 'react-router-dom';
 
 // export function MovieList({movieList, setMovieList}) {
 //   // const [movieList, setMovieList] = useState([
@@ -129,6 +131,10 @@ export function MovieList(){
   }).then((data) => getMovies());
   };
 
+  // Step:9
+  // Navigate to editing the movie 
+  const navigate = useNavigate();
+  
   return (
     <div>
       <div className="movie-list">
@@ -154,6 +160,17 @@ export function MovieList(){
                 color="error"
               >
                 <DeleteIcon />
+              </IconButton>
+            }
+            // editmovie.js -> step:1
+            editButton={
+              <IconButton 
+                sx={{marginLeft:"auto"}}
+                onClick={()=> navigate(`/movies/edit/${mv.id}`)} 
+                aria-label="edit"
+                color="secondary"
+              >
+              <EditIcon />
               </IconButton>
             }
             />
