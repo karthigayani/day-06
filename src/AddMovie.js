@@ -2,7 +2,7 @@
 // import { useState } from 'react';  // Step:15 comment useState 
 import Button from '@mui/material/Button';
 import TextField from '@mui/material/TextField';
-import {Navigate, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { useFormik } from "formik"; // Step:3
 import * as yup from 'yup'; // Step:12
 // Validations -- on Add movie
@@ -116,7 +116,7 @@ export function AddMovie({ movieList, setMovieList }) {
             method: "POST",
             body: JSON.stringify(newMovie),
             headers: { "Content-type": "application/json" },
-          }).then(() => Navigate('/movies')); // After adding the movie it will navigate to movie page
+          }).then(() => navigate('/movies')); // After adding the movie it will navigate to movie page
   };
 
   return (
