@@ -50,8 +50,8 @@ export function EditMovie() {
   useEffect(() => {
     fetch(`https://6404dff940597b65de2c4412.mockapi.io/moviesappapi/${id}`, { method: "GET" })
       .then((data) => data.json())
-      // .then((mv) => setMovie(mv));
-      .then((mv) => console.log(mv));
+      .then((mv) => setMovie(mv));
+      // .then((mv) => console.log(mv));
   }, []); // fetching the particular movie for the id and setting the movie details.
   
   console.log(movie);
