@@ -407,3 +407,39 @@ file:///C:/Users/Admin/Downloads/a49o9-hbe8l.webp
 ### React Recap:
 
 ### Day-14 completed
+
+### Backend Day-01 Dec-09
+
+### Databases
+
+- Special software to store data
+- Where does database live?
+- It can be in Laptop/PC. But Laptop/PC will not handle/support more request from clients at the same time.
+- So we go for cloud computing.
+
+### Cloud
+
+- Eg of Cloud Storage Providers - file:///C:/Users/Admin/Downloads/a4dmi-qv6py.webp
+- Can Cloud Storage Providers run software ? No❌ Because it is just a part of the cloud. It only store the data.
+- What is Cloud ?
+- Renting PC.
+- Eg of Cloud Providers - file:///C:/Users/Admin/Downloads/ab901-jgo0z.webp
+- AWS - Amazon Web Services. It is one who introduced the cloud renting concept. It is in No.1 place.
+- Cloud Market - file:///C:/Users/Admin/Downloads/aut0f-w88ty.webp
+- Why you are not buying instead of renting?
+  1.If your buying - file:///C:/Users/Admin/Downloads/a36ba-vc7dm.webp
+  2.If your Renting - file:///C:/Users/Admin/Downloads/ah1ag-qj167.webp
+- PC-Specs before buying/renting - file:///C:/Users/Admin/Downloads/ayacq-llefc.webp
+- How to choose ? - file:///C:/Users/Admin/Downloads/apy4z-utvmx.webp
+- Cloud OS is `linux`
+
+### Why linux ?
+
+1. In windows & MAC we have to pay license.
+2. But `linux` is Free service also it is a open source. So you can fix the problem easily.
+3. Security is high.
+4. It had different Flavours or distributions/distros and that flavours have different version.
+5. But in windows/MAC , they have only versions.
+6. AWS Linux distro - file:///C:/Users/Admin/Downloads/a6h56-5n6t7.webp
+7. 80% of the world running on `linux`.
+8. Reason for using linux - file:///C:/Users/Admin/Downloads/abmb5-77e0o.webp
