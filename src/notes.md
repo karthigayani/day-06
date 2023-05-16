@@ -443,3 +443,161 @@ file:///C:/Users/Admin/Downloads/a49o9-hbe8l.webp
 6. AWS Linux distro - file:///C:/Users/Admin/Downloads/a6h56-5n6t7.webp
 7. 80% of the world running on `linux`.
 8. Reason for using linux - file:///C:/Users/Admin/Downloads/abmb5-77e0o.webp
+
+### React ReCap MCQ
+
+1. Why do you use `<noscript>` tag in react?
+
+- It will show alert message when JavaScript is not enabled in your browser.
+- JavaScript is like lifebreathe/heartbeat of React.
+- JavaScript is used to bootstrap/Start the React App.
+
+2. When you consider a function as component?
+
+- Function name should be Start with capital letter.
+- It should return atleast one JSX element.
+
+3. What is inside the return ?
+
+- JSX - JavaScript XML
+
+4. End of the day JSX converted to ?
+
+- JavaScript with the help of Webpack and Babel.
+
+5. What is the command for building the react app local?
+
+- `npm run build`
+
+6. Why do you need to use classname? / Why not we directly use class instead of className?
+
+- class is a reserved keyword in JS.
+- JSX is finally converted to JS. It will make confusion. So to avoid this we use className.
+
+7. What is {} in JSX ?
+
+- Template Syntax.
+
+8. How to loop in JSX?
+
+- Mapping.
+
+9. function welcome`({name})`{
+   ....
+   } What is this syntax name in ES6? Which variable you are destructuring ?
+
+- Object destructuring.
+- props destructuring
+
+10. props is used to pass data from ---component to --- component?
+
+- Parent to child.
+
+11. Props is --- directional?
+
+- Unidirectional/onedirectional.
+- Parent to child.
+
+12. When we use mapping, we can face warning ? How to overcome/fix that warning? `Warning: Each child in a list should have a unique "key" prop.`
+
+- You have to add key attribute in return JSX(p/div) while mapping
+- key must be unique value. It may be an index/id.
+- Refer the Link -> https://codesandbox.io/s/practical-proskuriakova-mf7xed?file=/src/App.js
+
+13. How to send Child (info) to parent ?
+
+- Refer the Link -> https://codesandbox.io/s/kind-brown-6z24nr?file=/src/App.js
+
+14. Solve the error in code
+
+- Refer the Link -> https://codesandbox.io/s/bold-heyrovsky-wrtkx9?file=/src/App.js
+
+15. Why adding key attribute is important ? `Important interview question`
+
+- In react we use virtual DOM, to get the real benifit of react.
+- Hooks setSate is used to update the VDOM.
+
+### Virtual DOM
+
+1. It is the Copy of the Real DOM
+2. It is a Large {key: value}
+3. Updating it does not cost performance
+4. To access VDOM you could use hooks (eg : setState)
+5. Once the update is done on the virtual DOM, then the Real DOM is updated.
+6. Comparison - Reconcilliation - VDOM & Real DOM
+7. key helps to quickly compare the changes (like index no. in array) b/w VDOM & Real DOM
+8. document.\* in React - Looses performance
+9. VDOM is introduced to increase the performance of your website/webapp.
+10. It is key value pair structure.
+    See notes image for reference.
+
+### Why React is so fast?
+
+- Virtual DOM is the copy of the real DOM, but why don't we directly update the real DOM. If you change an element all the elements surrounding it Should also be updated/affected/rearranged.
+- So updating the real DOM is a costly operation. and loss in performance.
+- So instead of updating the real DOM, we can first update the virtual DOM. Then batch all the updates together and finally update the real DOM.
+- This saves lot of performance, because Virtual DOM is a big key:value pair.
+- Updating values in an Object doesn't costy. You can update values 10k times too. It doesn't affect the performance.
+- Once all the updates are done in the virtual DOM, Camparing/diffing operation is done with Virtual DOM and real DOM.
+- Whatever the changes done, only that is send to the real DOM.
+- Now the real DOM is updated. So the process of sinking the virtual DOM and real DOM is called as Reconcilliation.
+- And this is the reason we should not be using `document.*` in react, because it directly access the real DOM.
+
+### How do you access Virtual DOM ?
+
+- Using Hooks.
+
+16. Name the hooks we are using in your React App?
+
+- useState, useNavigate, useParams, useContext, useEffect, useReducer.
+
+17. What is the datatype of Hook ?
+
+- In JavaScript the only thing you are calling is function. So all the hooks are functions.
+- So the datatype of Hook is `function`.
+  => Function: JavaScript doesn't have a function data type but when we find the data type of a function using the typeof operator, we find that it returns a function. This is because a function is an object in JavaScript. Ideally the data type of a function should return an object but instead, it returns a function.
+
+18. How do you identify a function is a hook?
+
+- It should starts with use.
+
+19. Solve the Problem :
+
+- Refer the Link -> https://codesandbox.io/s/magical-joana-jy9nb5?file=/src/App.js
+
+20. What are the two ways to toggle(Hide & Display) data ?
+
+- 1. Conditional Styling - (Display none & block)
+- 2. Conditional Rendering
+
+21. What are the different types of routers?
+
+- There are 2 types of routers.
+- 1. `#` router
+- 2. `browser` router
+
+22. `#` router only work in older browser `Yes/No` ?
+
+- No. Because `#` router will work both in new & older browser.
+
+23. What is the path must be given to get `404` error?
+
+- path = "\*"
+
+24. Why link is needed ? instead of `<a>` tag.
+
+- In general we use anchor tag for page navigation. But when you use that it refresh your page every time. - So it will affect smooth performance of SPA property.
+- So we go for link tag `<Link to="/">Home</Link>`
+- Link tag navigate the pages without refreshing the page.
+
+25. How do you capture the id value from the URL ?
+
+- Using useParams hook.
+
+26. How do you change the URL programatically ?
+
+- Using useNavigate hook.
+
+27. How do you move forward 3 pages ?
+
+- navigate(3)
