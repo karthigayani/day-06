@@ -430,7 +430,7 @@ file:///C:/Users/Admin/Downloads/a49o9-hbe8l.webp
   1.If your buying - file:///C:/Users/Admin/Downloads/a36ba-vc7dm.webp
   2.If your Renting - file:///C:/Users/Admin/Downloads/ah1ag-qj167.webp
 - PC-Specs before buying/renting - file:///C:/Users/Admin/Downloads/ayacq-llefc.webp
-- How to choose ? - file:///C:/Users/Admin/Downloads/apy4z-utvmx.webp
+- How to choose #PcBuild ? - file:///C:/Users/Admin/Downloads/apy4z-utvmx.webp
 - Cloud OS is `linux`
 
 ### Why linux ?
@@ -443,6 +443,7 @@ file:///C:/Users/Admin/Downloads/a49o9-hbe8l.webp
 6. AWS Linux distro - file:///C:/Users/Admin/Downloads/a6h56-5n6t7.webp
 7. 80% of the world running on `linux`.
 8. Reason for using linux - file:///C:/Users/Admin/Downloads/abmb5-77e0o.webp
+9. OS linux flavours -> file:///C:/Users/Admin/Downloads/adgy5-u901k.webp
 
 ### React ReCap MCQ
 
@@ -601,3 +602,66 @@ file:///C:/Users/Admin/Downloads/a49o9-hbe8l.webp
 27. How do you move forward 3 pages ?
 
 - navigate(3)
+
+### Day-03-Backend - Database
+
+### Scaling
+
+- Scaling(Expanding/growing/developing)
+- Single PC cann't handle more request like 10k or more at the same time. So for handling higher request we look into scaling.
+- There are 2 types of Scaling -> file:///C:/Users/Admin/Downloads/a1e0m-uw527.webp
+- 1.  Vertical - Improving the quality of single PC (Making PC powerful)
+- 2. Horizontal - multiplying the quantity of PC (Increasing the no.of PC)
+
+### Auto Scaling
+
+- Refer the Link -> file:///C:/Users/Admin/Downloads/axf2l-ql4x7.webp
+- Pay only for what you used.
+- Hacking in AutoScaling -> file:///C:/Users/Admin/Downloads/admrf-s4sr9.webp
+  -> Sending Fake traffic to the server.
+  -> So it will affect the real traffic.
+  - How DDoS attacks work ? DDoS - Distributed Denial of Service.
+- Refer the Link -> file:///C:/Users/Admin/Downloads/ax8rf-t8hw4.webp
+
+### How do you verify real or fake traffic ?
+
+1. Using Capcha method
+2. USing IP address
+3. Jio location - limiting for particular area eg: India. So When traffic from other country, we rejects the request. (This method is used in Hulu, netflix, prime)
+
+### Why Database ?
+
+- Database is a special sofware pushes the frequently asked data from Harddisk to RAM automatically. So it stores data as well as efficiently handle the data.
+- Why Database -> file:///C:/Users/Admin/Downloads/annsz-autc5.webp
+- Database feature: -> file:///C:/Users/Admin/Downloads/a0l3y-jjba8.webp
+- Types of Database: -> file:///C:/Users/Admin/Downloads/a06ub-g1i8t.webp
+
+1. Relational Database (SQL)
+2. NoSQL
+
+### Relational Database (SQL)
+
+Examples:
+
+1. SQL
+2. PlSql - Introduced by Oracle
+3. MySQL
+4. Postgres - Open Source , cost low compared to PlSql
+5. AWS RDBMS - Relational Database Management Service
+
+### Non - Relational Database (NoSQL)
+
+Examples:
+
+1. MondoDB
+2. Cassandra - Theming(Netflix using)
+3. CouchDB
+4. Redis - fast in caching
+5. Neo4j
+6. AWS DynamoDB
+7. FirebaseDB - Real time database, No refreshing, used in share market.
+
+### SQL
+
+- SQL -> Structured Query Language
+- Refer the Link -> https://sqlbolt.com/
