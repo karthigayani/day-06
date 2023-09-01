@@ -408,30 +408,38 @@ file:///C:/Users/Admin/Downloads/a49o9-hbe8l.webp
 
 ### Day-14 completed
 
-### `Day-02 Backend-React-ReCap-MCQ - Dec-14`
+### `Day-02 Backend-React-Recap-MCQ - Dec-14`
 
 1. Why do you use `<noscript>` tag in react?
 
 - It will show alert message when JavaScript is not enabled in your browser.
-- JavaScript is like lifebreathe/heartbeat of React.
+- JavaScript is like life breathe/heartbeat of React.
 - JavaScript is used to bootstrap/Start the React App.
+- Without JavaScript you can’t start any react app.
 
 2. When you consider a function as component?
 
 - Function name should be Start with capital letter.
-- It should return atleast one JSX element.
+- It should return at least one JSX element.
 
-3. What is inside the return ?
+3. What is inside the return?
 
 - JSX - JavaScript XML
 
-4. End of the day JSX converted to ?
+4. End of the day JSX converted to?
 
-- JavaScript with the help of Webpack and Babel.
+- JSX Will be converted into JavaScript with the help of Webpack and Babel.
 
 5. What is the command for building the react app local?
 
 - `npm run build`
+
+Note: `npm run build` creates a new build folder in your local file. When you deploy react app into netlify this build folder only goes instead of src. This build folder contains only JS file in a compressed form.
+
+Steps: JSX -> JS -> (movieList -> a) -> uglification (\n, space) -> minification
+
+- Reducing variable Name size (uglification)
+- Removing newLine/indent/spacing (minification)
 
 6. Why do you need to use classname? / Why not we directly use class instead of className?
 
@@ -478,8 +486,8 @@ file:///C:/Users/Admin/Downloads/a49o9-hbe8l.webp
 
 15. Why adding key attribute is important ? `Important interview question`
 
-- In react we use virtual DOM, to get the real benifit of react.
-- Hooks setSate is used to update the VDOM.
+- In react we use virtual DOM, to get the real benefit of react.
+- Hooks (eg:setSate) is used to update the VDOM.
 
 ### Virtual DOM
 
@@ -487,8 +495,8 @@ file:///C:/Users/Admin/Downloads/a49o9-hbe8l.webp
 2. It is a Large {key: value}
 3. Updating it does not cost performance
 4. To access VDOM you could use hooks (eg : setState)
-5. Once the update is done on the virtual DOM, then the Real DOM is updated.
-6. Comparison - Reconcilliation - VDOM & Real DOM
+5. Once the update is done on the virtual DOM, comparison taking place b/w VDOM and Real DOM and then the Real DOM is updated.
+6. Comparison - Reconciliation - VDOM & Real DOM
 7. key helps to quickly compare the changes (like index no. in array) b/w VDOM & Real DOM
 8. document.\* in React - Looses performance
 9. VDOM is introduced to increase the performance of your website/webapp.
@@ -500,11 +508,11 @@ file:///C:/Users/Admin/Downloads/a49o9-hbe8l.webp
 - Virtual DOM is the copy of the real DOM, but why don't we directly update the real DOM. If you change an element all the elements surrounding it Should also be updated/affected/rearranged.
 - So updating the real DOM is a costly operation. and loss in performance.
 - So instead of updating the real DOM, we can first update the virtual DOM. Then batch all the updates together and finally update the real DOM.
-- This saves lot of performance, because Virtual DOM is a big key:value pair.
-- Updating values in an Object doesn't costy. You can update values 10k times too. It doesn't affect the performance.
-- Once all the updates are done in the virtual DOM, Camparing/diffing operation is done with Virtual DOM and real DOM.
+- This saves lot of performance, because Virtual DOM is a big key: value pair.
+- Updating values in an Object doesn't costly. You can update values 10k times too. It doesn't affect the performance.
+- Once all the updates are done in the virtual DOM, Comparing/diffing operation is done with Virtual DOM and real DOM.
 - Whatever the changes done, only that is send to the real DOM.
-- Now the real DOM is updated. So the process of sinking the virtual DOM and real DOM is called as Reconcilliation.
+- Now the real DOM is updated. So the process of sinking the virtual DOM and real DOM is called as Reconciliation.
 - And this is the reason we should not be using `document.*` in react, because it directly access the real DOM.
 
 ### How do you access Virtual DOM ?
@@ -515,21 +523,21 @@ file:///C:/Users/Admin/Downloads/a49o9-hbe8l.webp
 
 - useState, useNavigate, useParams, useContext, useEffect, useReducer.
 
-17. What is the datatype of Hook ?
+17. What is the datatype of Hook?
 
-- In JavaScript the only thing you are calling is function. So all the hooks are functions.
-- So the datatype of Hook is `function`.
+- In JavaScript the only thing you are calling is function. So, all the hooks are functions.
+- So, the datatype of Hook is `function`.
   => Function: JavaScript doesn't have a function data type but when we find the data type of a function using the typeof operator, we find that it returns a function. This is because a function is an object in JavaScript. Ideally the data type of a function should return an object but instead, it returns a function.
 
 18. How do you identify a function is a hook?
 
-- It should starts with use.
+- It should start with use.
 
-19. Solve the Problem :
+19. Solve the Problem:
 
 - Refer the Link -> https://codesandbox.io/s/magical-joana-jy9nb5?file=/src/App.js
 
-20. What are the two ways to toggle(Hide & Display) data ?
+20. What are the two ways to toggle (Hide & Display) data?
 
 - 1. Conditional Styling - (Display none & block)
 - 2. Conditional Rendering
@@ -548,20 +556,23 @@ file:///C:/Users/Admin/Downloads/a49o9-hbe8l.webp
 
 - path = "\*"
 
-24. Why link is needed ? instead of `<a>` tag.
+24. Why link is needed? instead of `<a>` tag.
 
-- In general we use anchor tag for page navigation. But when you use that it refresh your page every time. - So it will affect smooth performance of SPA property.
-- So we go for link tag `<Link to="/">Home</Link>`
+- Ans: To avoid page reloading.
+- In general, we use anchor tag for page navigation. But when you use that it refreshes your page every time. - So, it will affect smooth performance of SPA property.
+
+- So, we go for link tag `<Link to="/">Home</Link>`
+
 - Link tag navigate the pages without refreshing the page.
 
-25. How do you capture the id value from the URL ?
+25. How do you capture the id value from the URL?
 
 - Using useParams hook.
 
-26. How do you change the URL programatically ?
+26. How do you change the URL programmatically?
 
 - Using useNavigate hook.
 
-27. How do you move forward 3 pages ?
+27. How do you move forward 3 pages?
 
 - navigate(3)
