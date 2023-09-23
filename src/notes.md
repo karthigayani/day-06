@@ -576,3 +576,26 @@ Steps: JSX -> JS -> (movieList -> a) -> uglification (\n, space) -> minification
 27. How do you move forward 3 pages?
 
 - navigate(3)
+
+### Mockinterview 2 Questions:
+
+1. What is react ?
+2. Life cycle method concept in react ?
+3. why we use useEffect ?
+4. what is state in react ?
+5. what is virtual DOM ?
+6. What is propsdrilling ?
+7. differece between SQL & mongoDB
+8. why we use nodejs?
+9. what is the pupose of babel in react ?
+10. JWT ?
+11. What is the diff b/w findOne(id) and find({id})?
+12. what is the use of bcrypt in node.js ?
+13. In API if you want to update means which method you go for? PUT
+14. while login which method is used ? POST
+15. what is hook?
+16. what is props?
+17. why we did't use clascomponent ?
+18. why we use useState?
+19. What is middleware ?
+20.
