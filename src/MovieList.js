@@ -97,7 +97,8 @@ export function MovieList(){
 // Step:7
   const getMovies = () => {
     // fetch("https://6404dff940597b65de2c4412.mockapi.io/moviesappapi", { 
-    fetch(`${API}/moviesappapi`, { // replaced variable API
+    // fetch(`${API}/moviesappapi`, { // replaced variable API
+    fetch(`${API}/movies`, { // In mockapi we created the link in the name of "moviesappapi" but in node we generated the link in the name of "movies". Here we are going to connect node with react. So use the name as is it in node.
           method: "GET",
           })
           .then((data) => data.json())
@@ -126,7 +127,8 @@ export function MovieList(){
   const deleteMovie = (id) => {
     // Delete -> Refresh the data
     // fetch(`https://6404dff940597b65de2c4412.mockapi.io/moviesappapi/${id}`, {
-    fetch(`${API}/moviesappapi/${id}`, { // replaced variable API
+    // fetch(`${API}/moviesappapi/${id}`, { // replaced variable API
+    fetch(`${API}/movies/${id}`, { // In mockapi we created the link in the name of "moviesappapi" but in node we generated the link in the name of "movies". Here we are going to connect node with react. So use the name as is it in node.
       method: "DELETE",
 
       // step:8

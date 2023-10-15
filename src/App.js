@@ -142,7 +142,8 @@ function App() {
   // For other CRUD property You have to mention like this.(Instead of GET to can use "POST , PUT & DELETE")
   useEffect(() => {
     // fetch("https://6404dff940597b65de2c4412.mockapi.io/moviesappapi",{method:"GET"})
-    fetch(`${API}/moviesappapi`,{method:"GET"}) // replaced variable API
+    // fetch(`${API}/moviesappapi`,{method:"GET"}) // replaced variable API
+    fetch(`${API}/movies`,{method:"GET"}) // In mockapi we created the link in the name of "moviesappapi" but in node we generated the link in the name of "movies". Here we are going to connect node with react. So use the name as is it in node.
     .then((data) => data.json())
     // .then((mvs) => console.log(mvs)); 
     .then((mvs) => setMovieList(mvs)); 

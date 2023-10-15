@@ -114,7 +114,8 @@ export function AddMovie({ movieList, setMovieList }) {
     //   trailer: trailer,
     // };
           // fetch("https://6404dff940597b65de2c4412.mockapi.io/moviesappapi", { 
-          fetch(`${API}/moviesappapi`, { // replaced variable API
+          // fetch(`${API}/moviesappapi`, { // replaced variable API
+          fetch(`${API}/movies`, { // In mockapi we created the link in the name of "moviesappapi" but in node we generated the link in the name of "movies". Here we are going to connect node with react. So use the name as is it in node.
             method: "POST",
             body: JSON.stringify(newMovie),
             headers: { "Content-type": "application/json" },

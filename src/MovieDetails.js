@@ -11,7 +11,8 @@ import { API } from "./global"; // importing variable API
   const [movie, setMovie] = useState([]);
   useEffect(() => {
     // fetch(`https://6404dff940597b65de2c4412.mockapi.io/moviesappapi/${id}`, { method: "GET" })
-    fetch(`${API}/moviesappapi/${id}`, { method: "GET" }) // replaced variable API
+    // fetch(`${API}/moviesappapi/${id}`, { method: "GET" }) // replaced variable API
+    fetch(`${API}/movies/${id}`, { method: "GET" }) // In mockapi we created the link in the name of "moviesappapi" but in node we generated the link in the name of "movies". Here we are going to connect node with react. So use the name as is it in node.
       .then((data) => data.json())
       .then((mv) => setMovie(mv));
   }, []);

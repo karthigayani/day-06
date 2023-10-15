@@ -50,7 +50,8 @@ export function EditMovie() {
   const [movie, setMovie] = useState(null); // Declaring movie, setMovie
   useEffect(() => {
     // fetch(`https://6404dff940597b65de2c4412.mockapi.io/moviesappapi/${id}`, { method: "GET" })
-    fetch(`${API}/moviesappapi/${id}`, { method: "GET" }) // replaced variable API
+    // fetch(`${API}/moviesappapi/${id}`, { method: "GET" }) // replaced variable API
+    fetch(`${API}/movies/${id}`, { method: "GET" }) // In mockapi we created the link in the name of "moviesappapi" but in node we generated the link in the name of "movies". Here we are going to connect node with react. So use the name as is it in node.
       .then((data) => data.json())
       .then((mv) => setMovie(mv));
       // .then((mv) => console.log(mv));
@@ -95,7 +96,8 @@ function EditFormMovie({movie}){
     // JSON / XML
 
     // fetch(`https://6404dff940597b65de2c4412.mockapi.io/moviesappapi/${movie.id}`, {
-    fetch(`${API}/moviesappapi/${movie.id}`, { // replaced variable API
+    // fetch(`${API}/moviesappapi/${movie.id}`, { // replaced variable API
+    fetch(`${API}/movies/${movie.id}`, { // In mockapi we created the link in the name of "moviesappapi" but in node we generated the link in the name of "movies". Here we are going to connect node with react. So use the name as is it in node.
       method: "PUT",
       body: JSON.stringify(updatedMovie),
       headers: { "Content-type": "application/json" },
