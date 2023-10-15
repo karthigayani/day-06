@@ -7,6 +7,7 @@ import Stack from '@mui/material/Stack';
 import DeleteIcon from '@mui/icons-material/Delete';
 import EditIcon from '@mui/icons-material/Edit';
 import { useNavigate } from 'react-router-dom';
+import { API } from './global'; // importing variable API
 
 // export function MovieList({movieList, setMovieList}) {
 //   // const [movieList, setMovieList] = useState([
@@ -95,7 +96,8 @@ export function MovieList(){
   
 // Step:7
   const getMovies = () => {
-    fetch("https://6404dff940597b65de2c4412.mockapi.io/moviesappapi", { 
+    // fetch("https://6404dff940597b65de2c4412.mockapi.io/moviesappapi", { 
+    fetch(`${API}/moviesappapi`, { // replaced variable API
           method: "GET",
           })
           .then((data) => data.json())
@@ -123,7 +125,8 @@ export function MovieList(){
   // Deleting the movie & Updating the movieList
   const deleteMovie = (id) => {
     // Delete -> Refresh the data
-    fetch(`https://6404dff940597b65de2c4412.mockapi.io/moviesappapi/${id}`, { 
+    // fetch(`https://6404dff940597b65de2c4412.mockapi.io/moviesappapi/${id}`, {
+    fetch(`${API}/moviesappapi/${id}`, { // replaced variable API
       method: "DELETE",
 
       // step:8

@@ -5,6 +5,7 @@ import TextField from '@mui/material/TextField';
 import { useNavigate } from "react-router-dom";
 import { useFormik } from "formik"; // Step:3
 import * as yup from 'yup'; // Step:12
+import { API } from './global'; // importing variable API
 // Validations -- on Add movie
 // name - required
 // poster - min 4 chars, required
@@ -112,7 +113,8 @@ export function AddMovie({ movieList, setMovieList }) {
     //   summary: summary,
     //   trailer: trailer,
     // };
-          fetch("https://6404dff940597b65de2c4412.mockapi.io/moviesappapi", { 
+          // fetch("https://6404dff940597b65de2c4412.mockapi.io/moviesappapi", { 
+          fetch(`${API}/moviesappapi`, { // replaced variable API
             method: "POST",
             body: JSON.stringify(newMovie),
             headers: { "Content-type": "application/json" },

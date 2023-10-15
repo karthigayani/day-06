@@ -15,6 +15,7 @@ import Brightness7Icon from '@mui/icons-material/Brightness7';
 import { MovieDetails } from './MovieDetails';
 import { BasicForm } from './BasicForm';
 import { EditMovie } from './EditMovie';
+import { API } from './global'; // importing variable API
 
 
 // const INITIAL_MOVIE_LIST = [
@@ -140,7 +141,8 @@ function App() {
   //CRUD Property - Read(GET) -> Get method is a default method. So You don't need to mention . 
   // For other CRUD property You have to mention like this.(Instead of GET to can use "POST , PUT & DELETE")
   useEffect(() => {
-    fetch("https://6404dff940597b65de2c4412.mockapi.io/moviesappapi",{method:"GET"})
+    // fetch("https://6404dff940597b65de2c4412.mockapi.io/moviesappapi",{method:"GET"})
+    fetch(`${API}/moviesappapi`,{method:"GET"}) // replaced variable API
     .then((data) => data.json())
     // .then((mvs) => console.log(mvs)); 
     .then((mvs) => setMovieList(mvs)); 

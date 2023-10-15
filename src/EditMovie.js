@@ -17,6 +17,7 @@ import {useNavigate , useParams } from "react-router-dom";
 import { useFormik } from "formik"; 
 import * as yup from 'yup'; 
 import React, {useState, useEffect} from 'react'
+import { API } from './global'; // importing variable API
 
 const movieValidationSchema = yup.object({
   name: yup
@@ -48,7 +49,8 @@ export function EditMovie() {
   const { id } = useParams(); // id get from url
   const [movie, setMovie] = useState(null); // Declaring movie, setMovie
   useEffect(() => {
-    fetch(`https://6404dff940597b65de2c4412.mockapi.io/moviesappapi/${id}`, { method: "GET" })
+    // fetch(`https://6404dff940597b65de2c4412.mockapi.io/moviesappapi/${id}`, { method: "GET" })
+    fetch(`${API}/moviesappapi/${id}`, { method: "GET" }) // replaced variable API
       .then((data) => data.json())
       .then((mv) => setMovie(mv));
       // .then((mv) => console.log(mv));
@@ -92,7 +94,8 @@ function EditFormMovie({movie}){
     // JS -> python/JAVA / PHP (string) [dictionary]
     // JSON / XML
 
-    fetch(`https://6404dff940597b65de2c4412.mockapi.io/moviesappapi/${movie.id}`, { 
+    // fetch(`https://6404dff940597b65de2c4412.mockapi.io/moviesappapi/${movie.id}`, {
+    fetch(`${API}/moviesappapi/${movie.id}`, { // replaced variable API
       method: "PUT",
       body: JSON.stringify(updatedMovie),
       headers: { "Content-type": "application/json" },
