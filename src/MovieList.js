@@ -144,11 +144,11 @@ export function MovieList(){
     <div>
       <div className="movie-list">
       {movieList.map((mv) => (
-            <div key = {mv.id}>
+            <div key = {mv._id}>
             {/* <Movie movie={mv} id={mv.id} /> */}
             <Movie 
               movie={mv} 
-              id={mv.id}
+              id={mv._id}
               // Step:1 creating the JSX "deleteButton" and sending props as "deleteButton" to movie (near counter component call)
               //  Applyed renderProps pattern
               // deleteButton={<button>Delete me</button>}
@@ -160,7 +160,7 @@ export function MovieList(){
               <IconButton 
                 // style={{marginLeft:"auto"}}
                 sx={{marginLeft:"auto"}}
-                onClick={()=> deleteMovie(mv.id)} 
+                onClick={()=> deleteMovie(mv._id)} 
                 aria-label="delete"
                 color="error"
               >
@@ -171,7 +171,7 @@ export function MovieList(){
             editButton={
               <IconButton 
                 sx={{marginLeft:"auto"}}
-                onClick={()=> navigate(`/movies/edit/${mv.id}`)} 
+                onClick={()=> navigate(`/movies/edit/${mv._id}`)} 
                 aria-label="edit"
                 color="secondary"
               >
